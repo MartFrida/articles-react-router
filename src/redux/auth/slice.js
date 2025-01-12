@@ -11,7 +11,7 @@ const initialState = {
 const slice = createSlice({
   name: 'auth',
   initialState,
-  extraReducers: {}
+  reducers: {}
 })
 
 export const authReducer = slice.reducer
