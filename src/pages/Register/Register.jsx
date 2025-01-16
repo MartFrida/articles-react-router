@@ -7,8 +7,7 @@ const Register = () => {
   const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
   const submit = (data) => {
-    console.log(JSON.stringify(data))
-    dispatch(signupUser(JSON.stringify(data)))
+    dispatch(signupUser(data))
   }
   return (
     <div className='flex justify-center items-center min-h-[80vh] '>
