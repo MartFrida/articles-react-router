@@ -1,25 +1,25 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { registerThunk } from '../../redux/auth/operations'
+import { signupUser } from '../../redux/auth/operations'
 
 const Register = () => {
   const { register, handleSubmit } = useForm()
   const dispatch = useDispatch()
   const submit = (data) => {
-    console.log(data)
-    dispatch(registerThunk(data))
+    console.log(JSON.stringify(data))
+    dispatch(signupUser(JSON.stringify(data)))
   }
   return (
     <div className='flex justify-center items-center min-h-[80vh] '>
       <form
         onSubmit={handleSubmit(submit)}
-        className=' grid gap-4 border-2 border-black rounded-md shadow-md px-10 py-14'
+        className=' grid gap-4 border-2 border-black rounded-md shadow-md px-10 py-14 '
       >
         <label className='flex flex-col gap-2'>
           <span>Name</span>
           <input
-            {...register('name')}
+            {...register('username')}
             placeholder='Enter the Name'
             className='border-2 border-black p-1 rounded-md'
             type='text'

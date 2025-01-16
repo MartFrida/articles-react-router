@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Header } from './components/Header/Header.jsx'
-import Articles from './pages/Articles/Articles.jsx';
 import Register from './pages/Register/Register.jsx';
+import ArticlesList from './pages/Articles/ArticlesList.jsx';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<h1>Homepage</h1>} />
-        <Route path='/articles' element=<Articles /> />
+        <Route path='/articles' element=<ArticlesList /> />
         <Route path='/register' element=<Register /> />
       </Routes>
     </div>
